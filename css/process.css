@@ -1,0 +1,112 @@
+/* Process/Phased Path Section Styles */
+.process-section {
+  background-color: var(--color-white);
+}
+
+.phases-container {
+  position: relative;
+}
+
+.phases-line {
+  display: none;
+}
+
+.phases-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.phase-item {
+  text-align: center;
+}
+
+.phase-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phase-icon {
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--color-emerald-600);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.phase-icon svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--color-white);
+}
+
+.phase-number {
+  font-size: 0.875rem;
+  color: var(--color-emerald-600);
+  margin-bottom: 0.5rem;
+}
+
+.phase-item h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.phase-item p {
+  color: var(--color-gray-600);
+  margin-bottom: 1rem;
+}
+
+.phase-timeline {
+  display: inline-block;
+  background-color: var(--color-gray-100);
+  border-radius: var(--radius-full);
+  padding: 0.25rem 1rem;
+  font-size: 0.875rem;
+  color: var(--color-gray-600);
+}
+
+.process-note {
+  margin-top: 4rem;
+  background-color: var(--color-gray-50);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+}
+
+.process-note h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.process-note p {
+  font-size: 1.125rem;
+  color: var(--color-gray-600);
+}
+
+@media (min-width: 768px) {
+  .phases-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .phases-line {
+    display: block;
+    position: absolute;
+    top: 5rem;
+    left: 4rem;
+    right: 4rem;
+    height: 2px;
+    background-color: var(--color-emerald-200);
+  }
+  
+  .phases-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
