@@ -38,8 +38,12 @@
 
 .footer-grid {
   display: grid;
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 3rem;
   margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-column h3 {
@@ -62,6 +66,22 @@
 
 .footer-column a:hover {
   color: var(--color-emerald-400);
+}
+
+.footer-column-services {
+  text-align: left;
+}
+
+.footer-column-connect {
+  text-align: right;
+}
+
+.footer-column-connect .footer-contact {
+  justify-content: flex-end;
+}
+
+.footer-column-connect .footer-social {
+  justify-content: flex-end;
 }
 
 .footer-contact {
@@ -98,10 +118,15 @@
   .footer-cta h2 {
     font-size: 3rem;
   }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
 }
 
 @media (min-width: 768px) {
   .footer-grid {
-    grid-template-columns: repeat(4, 1fr);
+    max-width: 900px;
   }
 }
